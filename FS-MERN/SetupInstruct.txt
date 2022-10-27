@@ -1,0 +1,26 @@
+1. go into folder you want to host the project
+then in the terminal
+    mkdir ((project_name))
+    cd ((project_name))
+
+2. create a new folder called server and cd into it.
+    mkdir server
+    cd server
+
+3. in gitbash create a new file called server.js
+    touch server.js
+
+4. create a new project via
+    npm init -y
+
+5. install our dependencies
+    npm install express
+    npm install mongoose
+
+6. write the server code requiring express and where we launch our server
+
+7. modularize the folder structure with config, controllers, models, and routes
+
+8. now we'll go out of the server folder and create our client side (in this case our react app side)
+    cd.. 
+    npx create-react-app client
