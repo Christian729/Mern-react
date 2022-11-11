@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 
-const ProductForm = () => {
+const ProductForm = (props) => {
+    const {productList, setProductList} = props;// to make our data process fast
+
+    const {product, setProduct} = props; 
     const [title, setTitle] = useState("");
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
@@ -16,6 +19,8 @@ const ProductForm = () => {
             .then(res=>{
                 console.log(res);
                 console.log(res.data);
+                setProductList([...productList, res.data]) // this is where we set the data to pull up fast
+                setProduct([...product, res.data]);
             })
             .catch(err=>console.log(err))
     }
@@ -36,7 +41,5 @@ const ProductForm = () => {
             <input type='submit'/>
         </form>
     )
-
 }
-
 export default ProductForm;
