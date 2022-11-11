@@ -1,0 +1,28 @@
+def uncompress(s):# s represents our string we want to uncompress
+  numbers = '0123456789'
+  result = ''
+  i = 0
+  j = 0
+  # in this section we want to make a loop for going through iterations of the chars
+  while j < len(s): # while j is less than the length of the string
+    if s[j] in numbers: # if s[j] is a numeric char
+      j += 1
+    else:
+    #this is how you slice a string
+      num = int(s[i:j]) #start index i up to and not including j
+      # the num = int is casting this into a real number type
+      # what we want to do is repeat the j char, num times
+      result += s[j] * num
+      j += 1 # this sets j to the next char
+      i = j # then this catches i up to j incase it is the start of a 
+      # number sequence.
+      
+    return result
+  
+  
+  
+  
+#   my first attempt--- very lost
+  # for i in range(1,s):
+  #   <number><char>
+  #   return 
