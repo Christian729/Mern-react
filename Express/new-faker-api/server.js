@@ -1,4 +1,6 @@
-const faker = require("faker");
+const faker = require("faker"); 
+// const { faker } = require("@faker-js/faker")
+// this is actually the more updated version of faker
 
 const express = require("express");
 
@@ -38,6 +40,32 @@ app.get('/api/users/new', (req, res) => { // this is the get route that is being
     const newUser = makeUserObj(); // so here we are making a new user
     res.json(newUser); // and here we are sending the user through on the server side
 });
+
+
+//Create
+app.post('/api', (req, res ) =>{
+    const obj = {
+        userId: faker.datatype.uuid(),
+    }
+    myArray.push(obj)
+    res.json({msg:"This is my create"})
+})
+
+//Read
+app.get('/api', (req, res ) =>{
+    res.json({msg:"This is my read"})
+})
+
+//Update
+app.put('/api', (req, res ) =>{
+    res.json({msg:"This is my update"})
+})
+
+//Delete
+app.delete('/api', (req, res ) =>{
+    res.json({msg:"This is my Delete"})
+})
+
 
 
 app.get('/api/companies/new', (req, res) => {

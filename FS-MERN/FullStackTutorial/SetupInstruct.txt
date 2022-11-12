@@ -24,3 +24,35 @@ then in the terminal
 8. now we'll go out of the server folder and create our client side (in this case our react app side)
     cd.. 
     npx create-react-app client
+
+
+
+================AFTER YOU SET THAT UP=======================
+
+IN the server
+
+1.set up the controller 
+
+2. set up routes/ also config if you havent done that 
+
+3. set up the server.js
+
+
+
+================ AFTER setting up the back end=========================
+
+Go into your React project/ front end
+
+1. install axios with
+    npm install axios
+
+2. make the components with your component
+
+3. update the app.js
+
+4. STOP the server and clients if theyre currently running
+
+5. in the server, install cors with the command 
+    npm install cors
+
+6. update the server.js to require cors

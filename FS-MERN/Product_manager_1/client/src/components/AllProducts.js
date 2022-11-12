@@ -11,7 +11,7 @@ const AllProducts = (props) => {
             setProductList(res.data);
         })
         .catch((err)=> console.log(err))
-    }, []);
+    }, []); 
     return (
         <div>
             <h1>Display all </h1>

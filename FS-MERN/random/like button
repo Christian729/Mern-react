@@ -1,0 +1,21 @@
+const handleLike = () => {
+    axios.put(/api/update/${id}, {
+        likeCount: book.likeCount += 1
+    })
+    .then((res)=>{
+        console.log(res)
+        setLike(true)
+    }).catch((err)=>{
+        console.log(err)
+    })
+}
+
+<div id='likeContainer'>
+{like==false ? 
+<button onClick={(e)=>handleLike()} className='btn btn-success'>Like {book.name}!</button>
+:
+<button disabled={true} className='btn btn-success'>You liked {book.name}!</button>
+}
+</div>
+
+<h5>{${pet.likeCount}} like(s)</h5>

@@ -15,7 +15,7 @@ const ProductForm = (props) => {
             title,
             price,
             description
-        })
+        }) 
             .then(res=>{
                 console.log(res);
                 console.log(res.data);
